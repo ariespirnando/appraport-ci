@@ -1,0 +1,21 @@
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d21977b30311ea81081063c86186ec', 'IPA', 'XI', 'KELA', 'AGAMA', 1);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d3797cb30311ea81081063c86186ec', 'IPA', 'XI', 'KELA', 'PKN', 2);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d4c0b3b30311ea81081063c86186ec', 'IPA', 'XI', 'KELA', 'BINDO', 3);
+
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d6c36cb30311ea81081063c86186ec', 'IPA', 'XI', 'KELA', 'MTKW', 4);
+
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d7b613b30311ea81081063c86186ec', 'IPA', 'XI', 'KELA', 'SEJW', 5);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d5b394b30311ea81081063c86186ec', 'IPA', 'XI', 'KELA', 'BING', 6);
+
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1d8d4fab30311ea81081063c86186ec', 'IPA', 'XI', 'KELB', 'SBD', 7);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1da071ab30311ea81081063c86186ec', 'IPA', 'XI', 'KELB', 'PJOK', 8);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1db7cfab30311ea81081063c86186ec', 'IPA', 'XI', 'KELB', 'PKWU', 9);
+
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1dc7b38b30311ea81081063c86186ec', 'IPA', 'XI', 'KELC', 'MTKM', 10);
+
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1dd7f90b30311ea81081063c86186ec', 'IPA', 'XI', 'KELC', 'FISI', 11);
+
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1dffca5b30311ea81081063c86186ec', 'IPA', 'XI', 'KELC', 'KIMI', 12);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1dee04bb30311ea81081063c86186ec', 'IPA', 'XI', 'KELC', 'BIO', 13);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1e1f276b30311ea81081063c86186ec', 'IPA', 'XI', 'KELD', 'EKONLM', 14);
+INSERT INTO `tb_jurusanxpelajaran` (`guidjurusanxpelajaran`, `kodejuruan`, `kodekelas`, `kodekelompok`, `kodepelajaran`, `iurutan`) VALUES ('f1e10e73b30311ea81081063c86186ec', 'IPA', 'XI', 'KELE', 'SUNDA', 15);
