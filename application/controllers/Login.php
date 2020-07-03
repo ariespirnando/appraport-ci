@@ -11,7 +11,7 @@ class Login extends CI_Controller {
 		$data = array();
 		$data['modul'] = 'Login';
 		$data['action'] = base_url().'index.php/Login/cek'; 
-		$this->template->load('template_wp','login/login', $data);
+		$this->load->view('login/login', $data);
 	}
 	 
 	function cek(){   

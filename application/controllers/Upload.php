@@ -31,7 +31,26 @@ class Upload extends CI_Controller {
 
         $config['base_url'] = site_url('upload/index');   
         $config['per_page'] = 5;  //show record per halaman
-        $config["uri_segment"] = 3;  // uri parameter
+		$config["uri_segment"] = 3;  // uri parameter
+
+		$config['display_pages'] = FALSE;
+
+		$config['first_link']       = 'First';
+        $config['last_link']        = 'Last';
+        $config['next_link']        = 'Next';
+        $config['prev_link']        = 'Prev';  
+        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+        $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['prev_tagl_close']  = '</span>Next</li>';
+        $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+        $config['first_tagl_close'] = '</span></li>';
+        $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+		$config['last_tagl_close']  = '</span></li>';
+		
+		
         if($search_text==""){
         	$config['total_rows'] = $this->db->count_all('tbl_upload'); 
         	$choice = $config["total_rows"] / $config["per_page"];
@@ -51,7 +70,7 @@ class Upload extends CI_Controller {
 	        $data['search'] = $search_text;
         	$data['upload'] = $this->Upload_model->get_upload_list_search($config["per_page"], $data['page'],$search_text)->result_array(); 
         }  
-        $this->template->load('template_wp','upload/upload_view', $data);
+        $this->template->load('template','upload/upload_viewnew', $data);
 	} 
 
 	function add_upload(){

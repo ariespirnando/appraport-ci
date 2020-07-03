@@ -1,76 +1,87 @@
-<div class="page-content" style="">
-	<div class="row" >
-		<br>
-		<br>
-		<div class="col-xs-4">
-		</div>
-		<div class="col-xs-4">
-			<br>
-			<div class="clearfix">
-        	<div class="page-header pull-right"> 
+
+
+
+<head> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>Online Raport | SMA NEGERI 2 KOTA BEKASI</title>  
+	<meta name="description" content="overview &amp; stats" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/images/logo.png" />  
+<!--===============================================================================================-->	 
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets/login/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(<?php echo base_url() ?>/assets/login/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Online Raport <br> SMA NEGERI 2 KOTA BEKASI
+					</span>
 				</div>
-				<div class="pull-right"> </div>
+
+				<form class="login100-form validate-form" action="<?php echo $action ?>" method="post"> 
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="user" placeholder="Enter username">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<span class="focus-input100"></span>
+					</div>
+
+					 
+
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Login
+						</button>
+					</div> 
+					
+				</form>
 			</div>
-			
-			<?php
-			    if($this->session->userdata('message') <> ''){
-			        echo '<div class="alert alert-info">
-					            <button class="close" data-dismiss="alert">
-												<i class="ace-icon fa fa-times"></i>
-											</button>
-											'.$this->session->userdata('message').'
-			        			</div>';
-			    }
-			?>
-				
-			<div>
-				<div class="widget-box">  
-				 <div class="widget-body">
-					 <div class="widget-main no-padding">
-						 <form action="<?php echo $action ?>" method="post">
-							 <fieldset>  
-								<table class="table" width="90%"> 
-									<tr>
-						 				<td width="20%"><img src="<?php echo base_url() ?>/assets/images/logo.png" style='width: 100px;'></td>
-						 				<td width="70%" style="text-align:left;vertical-align:middle"><h4>SMA NEGERI 2 KOTA BEKASI</h4></td> 
-						 			</tr>
-								</table>
-							 	<table class="table table-bordered " width="90%"> 
-							 		<tbody>  
-							 			<tr>
-							 				<td width="20%">Username</td>
-							 				<td width="70%"><input class="form-control" type="text" name="user" value=""></td> 
-							 			</tr>
-							 			<tr>
-							 				<td width="20%">Password</td>
-							 				<td width="70%"><input class="form-control" type="password" name="pass" value=""></td> 
-							 			</tr> 
-							 		</tbody>
-							 	</table>
-								
-								 <br><br>
-								 <button type="submit" class="btn btn-lg btn-success">
-									 Login
-								 </button> 
-								 <button type="reset" class="btn btn-lg btn-warning">Reset</button> 
-								 <br>
-							 </fieldset>
-						 </form>
-					 </div>
-				 </div>
-			 </div>
-        <br>
-
-			</div> 
-		</div><!-- /.col -->
-
-		<div class="col-xs-4">
-
 		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/vendor/bootstrap/js/popper.js"></script>
+	<script src="<?php echo base_url() ?>/assets/login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/vendor/daterangepicker/moment.min.js"></script>
+	<script src="<?php echo base_url() ?>/assets/login/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>/assets/login/js/main.js"></script>
 
-		<div class="col-xs-12"> 
-			<br><br><br><br><br><br><br>
-		</div>
- 
-	</div><!-- /.row -->
-</div>
+</body> 

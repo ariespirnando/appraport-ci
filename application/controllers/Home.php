@@ -11,7 +11,7 @@ class Home extends CI_Controller {
 	public function index()
 	{  
 		$data['modul'] = 'Home';  
-		$this->template->load('template_wp','home/home', $data);
+		$this->template->load('template','home/home', $data);
 	} 
  
 	function randomdata(){
