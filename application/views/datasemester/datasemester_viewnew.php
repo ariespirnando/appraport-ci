@@ -21,11 +21,40 @@
         <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="card">
-            <h5 class="card-header">Responsive Table</h5>
+            <?php
+                if($this->session->userdata('message') <> ''){
+                    $msg = 'warning';
+                    if($this->session->userdata('info')==1){
+                    $msg = 'info';
+                    }
+                    echo '<br><div class="alert alert-'.$msg.'">
+                            <button class="close" data-dismiss="alert">
+                            <i class="ace-icon fa fa-times"></i>
+                            </button>
+                            '.$this->session->userdata('message').'
+                        </div>';
+                }
+            ?>  
             <div class="card-body">
                 <div class="table-responsive ">
+                <form method="post" action="<?php echo base_url().'index.php/datasemester' ?>">
                     <table class="table">
                         <thead>
+                        <tr> 
+              <td colspan="4" class="center">
+                <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
+              </td>
+              <td colspan="2" class="center">
+                <input type="submit" name='submit' class="btn btn-xs btn-success" value="Cari Data"> 
+                <?php 
+                  if($search!=''){
+                    ?>
+                      <input type="submit" name='reset' class="btn btn-xs btn-primary" value="Reset"> 
+                    <?php
+                  }
+                ?>
+              </td>
+            </tr>
                         <tr>
                         <th width="5%" class="center">No</th>
               <th width="15%" class="center">Semester</th>
@@ -60,6 +89,7 @@
            ?>
                         </tbody>
                     </table>
+                    </form>
                 </div>
                 <br>
                 <?php echo $pagination; ?>

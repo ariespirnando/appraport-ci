@@ -56,8 +56,7 @@
         <form method="post" action="<?php echo base_url().'index.php/datasiswa' ?>">
         <table id="table" class="table table-striped table-bordered table-hover" width="90%">
           <thead>
-            <tr> 
-            
+            <tr>  
               <td colspan="5" class="center">
                 <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
               </td>
