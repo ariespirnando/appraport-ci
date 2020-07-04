@@ -40,11 +40,21 @@
                 <form method="post" action="<?php echo base_url().'index.php/upload' ?>">
                     <table class="table">
                         <thead>
+
+                        <?php if($this->session->userdata('rule')==1){ ?>
+                        <tr>
+                        <td colspan="9" class="center text-left">
+                        <a href='<?php echo $add ?>' class="btn btn-xs btn-primary">Upload</a>
+                        </td>
+                        </tr>
+                        <?php } ?>
+
+
                         <tr> 
-              <td colspan="7" class="center">
+              <td colspan="6" class="center text-left">
                 <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
               </td>
-              <td colspan="2" class="center">
+              <td colspan="3" class="center text-right">
                 <input type="submit" name='submit' class="btn btn-xs btn-success" value="Cari Data"> 
                 <?php 
                   if($search!=''){
@@ -56,14 +66,14 @@
               </td>
             </tr>
                         <tr>
-                            <th width="5%" class="center">No</th>
-                            <th width="10%" class="center">Kelas</th>
-                            <th width="10%" class="center">Semester</th>
-                            <th width="10%" class="center">Jurusan</th>
-                            <th width="10%" class="center">Tahun Ajaran</th> 
-                            <th width="20%" class="center">Keterangan</th>   
-                            <th width="20%" class="center">Tanggal Raport</th>
-                            <th width="16%" colspan='2' class="center" class="center">Opsi</th> 
+                            <th width="5%" class="center text-center">No</th>
+                            <th width="10%" class="center text-center">Kelas</th>
+                            <th width="10%" class="center text-center">Semester</th>
+                            <th width="10%" class="center text-center">Jurusan</th>
+                            <th width="10%" class="center text-center">Tahun Ajaran</th> 
+                            <th width="20%" class="center text-center">Keterangan</th>   
+                            <th width="20%" class="center text-center">Tanggal Raport</th>
+                            <th width="16%" colspan='2' class="center text-center">Opsi</th> 
                             </tr>
                         </thead>
                         <tbody>
@@ -72,17 +82,17 @@
                             foreach ($upload as $k) {
                             echo '
                                 <tr>
-                                <td widtd="5%" class="center">'.$n++.'</td>
-                                <td widtd="15%" class="">'.$k['namakelas'].'</td>
-                                <td widtd="15%" class="">'.$k['semester'].'</td>
-                                <td widtd="15%" class="">'.$k['kodejuruan'].'</td> 
-                                <td widtd="15%" class="">'.$k['tahunajaran'].'</td> 
+                                <td widtd="5%" class="center text-center">'.$n++.'</td>
+                                <td widtd="15%" class="text-center">'.$k['namakelas'].'</td>
+                                <td widtd="15%" class="text-center">'.$k['semester'].'</td>
+                                <td widtd="15%" class="text-center">'.$k['kodejuruan'].'</td> 
+                                <td widtd="15%" class="text-center">'.$k['tahunajaran'].'</td> 
                                 <td widtd="20%" class="">'.$k['keterangan'].'</td>
-                                <td widtd="15%" class="center">'.$k['tanggal_raport'].'</td>';
+                                <td widtd="15%" class="center text-center">'.$k['tanggal_raport'].'</td>';
                                     echo '<td widtd="8%" class="center"><a class="btn btn-xs btn-primary" href="'.base_url().'index.php/upload/edittgl_upload/'.$k['guidupload'].'">';
                                     echo '<i class="ace-icon fa fa-edit bigger-120"></i></a></td>';
                                 if($this->session->userdata('rule')==1){
-                                    echo '<td widtd="8%" class="center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/upload/hapus_upload/'.$k['guidupload'].'">';
+                                    echo '<td widtd="8%" class="cente text-centerr"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/upload/hapus_upload/'.$k['guidupload'].'">';
                                     echo '<i class="ace-icon fa fa-trash bigger-120"></i></a></td>';
                                 }else{ 
                                     echo '<td>-</td>';

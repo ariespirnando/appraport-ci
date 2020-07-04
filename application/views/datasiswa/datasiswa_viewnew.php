@@ -44,10 +44,10 @@
                     <table class="table">
                         <thead>
                         <tr>  
-              <td colspan="5" class="center">
+              <td colspan="5" class="center text-left">
                 <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
               </td>
-              <td colspan="2" class="center">
+              <td colspan="2" class="center text-right">
                 <input type="submit" name='submit' class="btn btn-xs btn-success" value="Cari Data"> 
                 <?php 
                   if($search!=''){
@@ -60,12 +60,12 @@
               
             </tr>
                         <tr>
-                        <th width="5%" class="center">No</th>
-                        <th width="15%" class="center">Nomor Induk</th>
-                        <th width="30%" colspan="2" class="center">Nama Siswa</th> 
-                        <th width="5%" class="center">Jenis Kelamin</th>
-                        <th width="5%" class="center">Reset Password</th>  
-                        <th width="5%" class="center">Delete</th>  
+                        <th width="5%" class="center text-center">No</th>
+                        <th width="15%" class="center text-center">Nomor Induk</th>
+                        <th width="30%" colspan="2" class="center text-center">Nama Siswa</th> 
+                        <th width="5%" class="center text-center">Jenis Kelamin</th>
+                        <th width="5%" class="center text-center">Reset Password</th>  
+                        <th width="5%" class="center text-center">Delete</th>  
                             </tr>
                         </thead>
                         <tbody>
@@ -74,12 +74,12 @@
                             foreach ($datasiswa as $k) {
                             echo '
                                 <tr>
-                                <td widtd="5%" class="center">'.$n++.'</td>
+                                <td widtd="5%" class="center text-center">'.$n++.'</td>
                                 <td widtd="15%" class="">'.$k['niksiswa'].'</td>
                                 <td widtd="30%" colspan="2" class="">'.$k['namasiswa'].'</td> 
-                                <td widtd="5%" class="">'.$k['kelamin'].'</td>
-                                <td widtd="5%" class="center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/datasiswa/rstdatasiswa/'.$k['guidsiswa'].'">Reset</a></td>
-                                <td widtd="5%" class="center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/datasiswa/deletedatasiswa/'.$k['guidsiswa'].'">Delete</a></td>';  
+                                <td widtd="5%" class="text-center">'.$k['kelamin'].'</td>
+                                <td widtd="5%" class="center text-center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/datasiswa/rstdatasiswa/'.$k['guidsiswa'].'">Reset</a></td>
+                                <td widtd="5%" class="center text-center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/datasiswa/deletedatasiswa/'.$k['guidsiswa'].'">Delete</a></td>';  
                                 echo '</tr>';
                             }
                         ?>

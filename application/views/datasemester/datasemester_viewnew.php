@@ -40,27 +40,37 @@
                 <form method="post" action="<?php echo base_url().'index.php/datasemester' ?>">
                     <table class="table">
                         <thead>
+
+                        <?php if($this->session->userdata('rule')==1){ ?>
+                          <tr> 
+                          <td colspan="6" class="center text-left">
+                            <a href='<?php echo $add ?>' class="btn btn-xs btn-primary">Tambah Semester</a>
+                          </td>
+                          </tr> 
+                        <?php } ?>
+
+
                         <tr> 
-              <td colspan="4" class="center">
-                <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
-              </td>
-              <td colspan="2" class="center">
-                <input type="submit" name='submit' class="btn btn-xs btn-success" value="Cari Data"> 
-                <?php 
-                  if($search!=''){
-                    ?>
-                      <input type="submit" name='reset' class="btn btn-xs btn-primary" value="Reset"> 
-                    <?php
-                  }
-                ?>
-              </td>
-            </tr>
+                          <td colspan="4" class="center text-left">
+                            <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
+                          </td>
+                          <td colspan="2" class="center text-right">
+                            <input type="submit" name='submit' class="btn btn-xs btn-success" value="Cari Data"> 
+                            <?php 
+                              if($search!=''){
+                                ?>
+                                  <input type="submit" name='reset' class="btn btn-xs btn-primary" value="Reset"> 
+                                <?php
+                              }
+                            ?>
+                          </td>
+                        </tr>
                         <tr>
-                        <th width="5%" class="center">No</th>
-              <th width="15%" class="center">Semester</th>
-              <th width="15%" class="center">Tipe</th>
-              <th width="15%" class="center">Tahun Ajaran</th>    
-              <th width="16%" colspan='2' class="center">Opsi</th> 
+                        <th width="5%" class="center text-center">No</th>
+                        <th width="15%" class="center text-center">Semester</th>
+                        <th width="15%" class="center text-center">Tipe</th>
+                        <th width="15%" class="center text-center">Tahun Ajaran</th>    
+                        <th width="16%" colspan='2' class="center text-center">Opsi</th> 
                             </tr>
                         </thead>
                         <tbody>
@@ -69,16 +79,16 @@
             foreach ($datasemester as $k) {
               echo '
                 <tr>
-                  <td widtd="5%" class="center">'.$n++.'</td>
-                  <td widtd="15%" class="">'.$k['semester'].'</td>
-                  <td widtd="15%" class="">'.$k['tipe'].'</td>
-                  <td widtd="15%" class="">'.$k['tahunajaran'].'</td>';
+                  <td widtd="5%" class="center text-center">'.$n++.'</td>
+                  <td widtd="15%" class="text-center">'.$k['semester'].'</td>
+                  <td widtd="15%" class="text-center">'.$k['tipe'].'</td>
+                  <td widtd="15%" class="text-center">'.$k['tahunajaran'].'</td>';
                   if($this->session->userdata('rule')==1){
-                    echo'<td widtd="8%" class="center">'; 
+                    echo'<td widtd="8%" class="center text-center">'; 
                     echo '<a class="btn btn-xs btn-warning" href="'.base_url().'index.php/datasemester/edit_datasemester/'.$k['guidsemester'].'">';
                     echo '<i class="ace-icon fa fa-edit bigger-120"></i>';
                     echo '</a></td>';
-                    echo '<td widtd="8%" class="center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/datasemester/hapus_datasemester/'.$k['guidsemester'].'">';
+                    echo '<td widtd="8%" class="center text-center"><a class="btn btn-xs btn-danger" href="'.base_url().'index.php/datasemester/hapus_datasemester/'.$k['guidsemester'].'">';
                     echo '<i class="ace-icon fa fa-trash bigger-120"></i></td>';
                   }else{
                     echo '<td>-</td>';

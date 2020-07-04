@@ -41,13 +41,13 @@
                     <table class="table">
                         <thead>
                         <tr>  
-                        <td colspan="7" class="center">
+                        <td colspan="7" class="center text-left">
                             <input type="text" class="form-control btn-xs" name="search" value="<?php echo $search ?>" placeholder='Cari Data'>
                         </td>
                         <?php if($rule==1){ ?>
-                        <td colspan="3" class="center">
+                        <td colspan="3" class="center text-right">
                         <?php }else{ ?>
-                        <td colspan="3" class="center">
+                        <td colspan="3" class="center text-right">
                         <?php } ?>
                             <input type="submit" name='submit' class="btn btn-xs btn-success" value="Cari Data"> 
                             <?php 
@@ -61,18 +61,18 @@
                         
                         </tr>
                         <tr>
-                            <th width="3%" class="center">No</th>
-                            <th width="10%" class="center">Nomor Induk</th>
-                            <th width="25%" class="center">Nama Siswa</th> 
-                            <th width="3%" class="center">Jenis Kelamin</th>  
-                            <th width="15%" class="center">Kelas & Semester</th> 
-                            <th width="5%" class="center">Tahun Ajaran</th>  
-                            <th width="5%" class="center">Peminatan</th> 
+                            <th width="3%" class="center text-center">No</th>
+                            <th width="10%" class="center text-center">Nomor Induk</th>
+                            <th width="25%" class="center text-center">Nama Siswa</th> 
+                            <th width="3%" class="center text-center">Jenis Kelamin</th>  
+                            <th width="15%" class="center text-center">Kelas & Semester</th> 
+                            <th width="5%" class="center text-center">Tahun Ajaran</th>  
+                            <th width="5%" class="center text-center">Peminatan</th> 
                             <?php if($rule==1){ ?>
-                            <th width="5%" class="center">Status Pembayaran SPP</th> 
+                            <th width="5%" class="center text-center">Status Pembayaran SPP</th> 
                             <?php } ?>
-                            <th width="5%" class="center">Status Kenaikan Kelas</th> 
-                            <th width="5%" class="center">Download Raport</th> 
+                            <th width="5%" class="center text-center">Status Kenaikan Kelas</th> 
+                            <th width="5%" class="center text-center">Download Raport</th> 
                             </tr>
                         </thead>
                         <tbody>
@@ -81,10 +81,10 @@
                             foreach ($raportsiswa as $k) {
                                 echo '
                                 <tr>
-                                    <td widtd="3%" class="center">'.$n++.'</td> 
+                                    <td widtd="3%" class="center text-center">'.$n++.'</td> 
                                     <td widtd="10%" class="">'.$k['niksiswa'].'</td>
                                     <td widtd="25%" class="">'.$k['namasiswa'].'</td>
-                                    <td widtd="3%" class="center">'.$k['kelamin'].'</td>
+                                    <td widtd="3%" class="center text-center">'.$k['kelamin'].'</td>
                                     <td widtd="15%" class="">'.$k['namakelas'].'-'.$k['semester'].'</td> 
                                     <td widtd="5%" class="">'.$k['tahunajaran'].'</td>
                                     <td widtd="5%" class="">'.$k['kodejuruan'].'</td>';
@@ -119,7 +119,7 @@
                                     } 
                                     }
                                     echo '</td>
-                                    <td widtd="5%" class="center"><a class="btn btn-xs btn-primary" href="'.base_url().'index.php/raportsiswa/download1/'.$k['guidraport'].'">';
+                                    <td widtd="5%" class="center text-center"><a class="btn btn-xs btn-primary" href="'.base_url().'index.php/raportsiswa/download1/'.$k['guidraport'].'">';
                                     echo '<i class="ace-icon fa fa-download bigger-120"></i></a></td>
                                 </tr>
                                     ';  
