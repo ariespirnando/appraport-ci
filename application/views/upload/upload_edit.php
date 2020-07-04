@@ -52,7 +52,7 @@
              <label class="col-sm-2 col-form-label">Tanggal TTD Raport</label>
              <div class="col-sm-10">
                <input type="hidden" class="form-control"  name='guidupload' value='<?php echo $id ?>'>
-               <input type="text" class="form-control" id='datepicker' name='tanggal_raport' placeholder="Tanggal TTD Raport">
+               <input type="date" id="birthday"class="form-control" name='tanggal_raport' placeholder="Tanggal TTD Raport">
              </div>
            </div> 
             
@@ -76,12 +76,6 @@
 </div>
 
  
-
-
-<script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-</script>
+ 
 
  

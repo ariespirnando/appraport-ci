@@ -76,7 +76,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Tanggal TTD Raport</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id='datepicker' name='tanggal_raport' placeholder="Tanggal TTD Raport">
+              <input type="date" id="birthday" class="form-control" name='tanggal_raport' placeholder="Tanggal TTD Raport">
             </div>
           </div> 
           <div class="form-group row">
@@ -104,11 +104,5 @@
     </div>
 </div>
 
-
-
-<script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-</script>
+ 
  

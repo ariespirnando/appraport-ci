@@ -384,7 +384,7 @@ class Upload extends CI_Controller {
 		
 	}
 
-
+ 
 	function tanggal_indonesia($tanggal){ 
         $bulan = array (
         1 =>   'Januari',
@@ -400,7 +400,7 @@ class Upload extends CI_Controller {
         'November',
         'Desember'
         ); 
-        $pecahkan = explode('/', $tanggal); 
-        return $pecahkan[1] . ' ' . $bulan[ (int)$pecahkan[0] ] . ' ' . $pecahkan[2];
+        $pecahkan = explode('-', $tanggal); 
+        return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
     } 
 }
