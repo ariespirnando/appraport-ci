@@ -74,7 +74,7 @@ class Datasemester extends CI_Controller {
 		$data['action'] = base_url().'index.php/datasemester/save_datasemester';
 		$data['res']	= array(); 
 		$data['modul'] = 'Master';
-		$this->template->load('template_wp','datasemester/datasemester_add', $data);
+		$this->template->load('template','datasemester/datasemester_add', $data);
 	}
 
 	function edit_datasemester(){ 
@@ -84,7 +84,7 @@ class Datasemester extends CI_Controller {
 		$data['id']		=  $this->uri->segment(3);
 		$data['res']	= $this->db->get('tbl_semester')->row_array();
 		$data['modul'] = 'Master'; 
-		$this->template->load('template_wp','datasemester/datasemester_edit', $data);
+		$this->template->load('template','datasemester/datasemester_edit', $data);
 	}
 
 	function hapus_datasemester(){

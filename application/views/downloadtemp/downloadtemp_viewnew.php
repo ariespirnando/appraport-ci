@@ -10,7 +10,8 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Transaksi</a></li> 
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Upload</a></li> 
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Upload Raport</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Upload</a></li>  
                                         <li class="breadcrumb-item active" aria-current="page">Template</li>
                                     </ol>
                                 </nav>
@@ -31,7 +32,7 @@
                     if($this->session->userdata('info')==1){
                     $msg = 'info';
                     }
-                    echo '<br><div class="alert alert-'.$msg.'">
+                    echo '<div class="alert alert-'.$msg.'">
                             <button class="close" data-dismiss="alert">
                             <i class="ace-icon fa fa-times"></i>
                             </button>

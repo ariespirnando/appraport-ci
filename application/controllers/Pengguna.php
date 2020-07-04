@@ -14,7 +14,7 @@ class Pengguna extends CI_Controller {
 		$data['action'] = base_url().'index.php/pengguna/ubah_password';
 		$data['res']	= array();
 		$data['modul'] = 'Pengaturan'; 
-		$this->template->load('template_wp','pengguna/pengguna_ubahpw', $data);
+		$this->template->load('template','pengguna/pengguna_ubahpwnew', $data);
 	}
 
 	 

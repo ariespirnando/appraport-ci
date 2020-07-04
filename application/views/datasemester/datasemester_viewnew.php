@@ -27,7 +27,7 @@
                     if($this->session->userdata('info')==1){
                     $msg = 'info';
                     }
-                    echo '<br><div class="alert alert-'.$msg.'">
+                    echo '<div class="alert alert-'.$msg.'">
                             <button class="close" data-dismiss="alert">
                             <i class="ace-icon fa fa-times"></i>
                             </button>

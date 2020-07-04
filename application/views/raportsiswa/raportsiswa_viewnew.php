@@ -4,13 +4,13 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
-                    <h2 class="pageheader-title">Transaksi</h2>
+                    <h2 class="pageheader-title">Raport</h2>
                      <div class="page-breadcrumb">
                      <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Transaksi</a></li> 
-                                        <li class="breadcrumb-item active" aria-current="page">Upload Raport</li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Raport</a></li> 
+                                        <li class="breadcrumb-item active" aria-current="page">Raport Siswa</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -27,7 +27,7 @@
                 if($this->session->userdata('info')==1){
                   $msg = 'info';
                 }
-                echo '<br><div class="alert alert-'.$msg.'">
+                echo '<div class="alert alert-'.$msg.'">
                         <button class="close" data-dismiss="alert">
                           <i class="ace-icon fa fa-times"></i>
                         </button>

@@ -82,7 +82,7 @@ class Upload extends CI_Controller {
 		$data['kelas'] = $this->db->get('tbl_kelas')->result_array();
 		$data['semester'] = $this->db->get('tbl_semester')->result_array();
 		$data['modul'] = 'Transaksi';
-		$this->template->load('template_wp','upload/upload_add', $data);
+		$this->template->load('template','upload/upload_add', $data);
 	}
   
 	function hapus_upload(){
@@ -100,7 +100,7 @@ class Upload extends CI_Controller {
 		$data['action'] = base_url().'index.php/upload/update_upload';  
 		$data['id']		=  $this->uri->segment(3); 
 		$data['modul'] 	= 'Transaksi'; 
-		$this->template->load('template_wp','upload/upload_edit', $data);
+		$this->template->load('template','upload/upload_edit', $data);
 	}
 
 	function update_upload(){ 

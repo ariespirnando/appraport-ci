@@ -78,7 +78,7 @@ class Datakepsek extends CI_Controller {
 		$data['id']		=  $this->uri->segment(3);
 		$data['res']	= $this->db->get('tbl_kepsek')->row_array();
 		$data['modul'] = 'Master'; 
-		$this->template->load('template_wp','datakepsek/datakepsek_edit', $data);
+		$this->template->load('template','datakepsek/datakepsek_edit', $data);
 	}
   
 	function update_datakepsek(){

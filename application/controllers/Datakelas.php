@@ -78,7 +78,7 @@ class Datakelas extends CI_Controller {
 		$this->db->where('status','A');
 		$data['kelas'] = $this->db->get('tbl_kelasconfig')->result_array();
 		$data['modul'] = 'Master';
-		$this->template->load('template_wp','datakelas/datakelas_add', $data);
+		$this->template->load('template','datakelas/datakelas_add', $data);
 	}
 
 	function edit_datakelas(){ 
@@ -92,7 +92,7 @@ class Datakelas extends CI_Controller {
 
 		$this->db->where('status','A');
 		$data['kelas'] = $this->db->get('tbl_kelasconfig')->result_array();
-		$this->template->load('template_wp','datakelas/datakelas_edit', $data);
+		$this->template->load('template','datakelas/datakelas_edit', $data);
 	}
 
 	function hapus_datakelas(){

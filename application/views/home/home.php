@@ -8,7 +8,7 @@
                      <div class="page-breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb"> 
-                                <li class="breadcrumb-item active" aria-current="page">Selamat Datang, <b>Achmad Aries Pirnando</b></li>
+                                <li class="breadcrumb-item active" aria-current="page">Selamat Datang, <b><?php echo $this->session->userdata('nama_pengguna')?></b></li>
                             </ol>
                         </nav>
                     </div>
@@ -20,6 +20,7 @@
         <?php if($this->session->userdata('rule')==1){ ?> 
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                <a href='<?php echo base_url()?>index.php/upload'>
                     <div class="card">
                         <div class="card-body"> 
                         <div style='margin: auto;' class='center'>
@@ -29,8 +30,10 @@
                         </div>
                         </div> 
                     </div>
+                </a>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                <a href='<?php echo base_url()?>index.php/raportsiswa'>
                     <div class="card">
                         <div class="card-body">
                         <div style='margin: auto;' class='center'>
@@ -40,11 +43,13 @@
                         </div>
                         </div> 
                     </div>
+                </a>
                 </div> 
             </div>
         <?php } else { ?>
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                <a href='<?php echo base_url()?>index.php/raportsiswa'>
                     <div class="card">
                         <div class="card-body"> 
                         <div style='margin: auto;' class='center'>
@@ -54,8 +59,10 @@
                         </div>
                         </div> 
                     </div>
+                </a>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                <a href='<?php echo base_url()?>index.php/pengguna/ganti_pwpengguna'>
                     <div class="card">
                         <div class="card-body">
                         <div style='margin: auto;' class='center'>
@@ -65,6 +72,7 @@
                         </div>
                         </div> 
                     </div>
+                </a>
                 </div> 
             </div>
         <?php } ?>
